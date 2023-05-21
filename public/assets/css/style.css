@@ -46,6 +46,7 @@ nav .navbar {
     display: block;
     padding: 10px;
   border-radius: 0.5rem;
+  color: var(--text-color);
 }
 
 nav .navbar ul {
