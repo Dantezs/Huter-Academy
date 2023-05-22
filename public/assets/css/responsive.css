@@ -45,6 +45,7 @@
       color: red;
       padding: 1rem 0;
       cursor: pointer;
+      margin-right: 10px;
     }
     .hamburger {
       border-top: 0.125rem solid;

@@ -1,10 +1,8 @@
-// Função para processar a resposta da API
-
-  // Função para lidar com o evento de pressionar a tecla Enter
+// Função para lidar com o evento de pressionar a tecla Enter
   function handleEnterKeyPress(event) {
     if (event.key === 'Enter') {
       const searchTerm = document.getElementById('search-input').value;
-      let url = `https://dfunctions.squareweb.app/user/${searchTerm}`;
+      let url = ``;
   
       fetch(url)
         .then(function(response) {
@@ -23,11 +21,5 @@
 
   function resposta(resultressponse) {
     let resultado = document.querySelector('#test');
-    let erros = `O id : ${resposta} é invalido`
-
-    if (resultado && resultado.erro) {
-        alert(erros);
-    } else {
-        resposta.innerHTML = `<p>${resposta.user.username}</p>`
-    }
+    
   };

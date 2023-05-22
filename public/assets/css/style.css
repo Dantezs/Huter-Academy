@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+
 body {
   background-color: var(--background-color);
   color: var(--text-color);
@@ -40,6 +43,8 @@ nav .navbar {
     display: flex;
     text-align: center;
     align-items: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
 }
 
 .logo a {
@@ -96,6 +101,7 @@ nav>.navbar>ul>li>a:hover {
     border: none;
     background-color: #313131;
     border-radius: 50px;
+    color: var(--text-color);
 }
 
 .search-container input:focus {
