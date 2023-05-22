@@ -8,6 +8,7 @@ body {
   --text-color: #ffffff;
   --text-hover-color: #797979;
   --border-color: #ffffff;
+  --background-navbar: #525252;
 }
 
 .light-theme {
@@ -15,6 +16,7 @@ body {
   --text-color: #000000;
   --text-hover-color: #858585;
   --border-color:#000000;
+  --background-navbar: #5e5e5e;
 }
 /* ------------------------------------------------------- */
 * {
@@ -27,11 +29,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--background-color);
+  background-color: var(--background-navbar);
 }
 
 .logo {
-  font-size: 1.5rem;
   font-weight: bold;
 }
 
@@ -45,8 +46,8 @@ nav .navbar {
     text-decoration: none;
     display: block;
     padding: 10px;
-  border-radius: 0.5rem;
-  color: var(--text-color);
+    border-radius: 0.5rem;
+    color: var(--text-color);
 }
 
 nav .navbar ul {
@@ -66,7 +67,7 @@ nav>.navbar>ul>li>a {
 }
 
 nav>.navbar>ul>li>a:hover {
-    color: red;
+    color: var(--text-hover-color);
 }
 
 
