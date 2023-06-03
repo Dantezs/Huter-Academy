@@ -35,9 +35,6 @@ body {
   background-color: var(--background-navbar);
 }
 
-.logo {
-  font-weight: bold;
-}
 
 nav .navbar {
     display: flex;
