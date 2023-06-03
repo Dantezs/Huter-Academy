@@ -8,14 +8,15 @@
     <link rel="stylesheet" href="public/assets/css/responsive.css">
     <link rel="stylesheet" href="public/assets/css/style.css">
     <link rel="shortcut icon" href="/public/assets/imgs/icons/unnamed.jpg" type="image/x-icon">
-    <title>Front End</title>
+    <title>irmão do jorel - Website</title>
 </head>
 <body>
-    <header class="header">
+
+  <header class="header">
 
       <div class="logo">
-            <a href="">Logo</a>
-          </div>
+            <a href="">irmão do jorel</a>
+      </div>
 
     <nav class="nav">
         <div class="navbar">
@@ -27,12 +28,22 @@
           aria-expanded="false"
         ><span class="hamburger"></span>
         </button>
-          
+      
           
           <ul class="nav-menu" id="nav-menu" role="nav-menu">
             <li><a href="">Inicio</a></li>
             <li><a href="public/assets/pages/">Responsaveis</a></li>
-            <li><a href="public/assets/pages/">Docs</a></li>
+            <li><a href="public/assets/pages/">topicos</a></li>
+            <li><a href="public/assets/pages/">atualizacoes</a></li>
+            <li class="dropdown">
+              <a class="dropdown-btn">Topicos</a>
+              <div class="dropdown-content">
+                <!-- Conteúdo do menu dropdown -->
+                <a href="#1">Novos</a>
+                <a href="#2"></a>
+                <a href="#"></a>
+              </div>
+            </li>
             <li><a href="public/assets/pages/discord/invite/HZn99juDtK">Ouvidoria</a></li>
             <li><div class="search-container">
               <i class="fas fa-search" id="search-icon"></i>
@@ -42,13 +53,72 @@
         </div>
       </nav>
       </header>
-<!-- <button id="theme-toggle"><i class="fa-solid fa-moon-over-sun"></i></button> -->
+
+      <section class="container-section">
+        <div class="conteudo-add">
+          <div class="tooltip">
+            <h1>irmão do jorel</h1>
+            <span class="tooltiptext">Veio aqui porque</span>
+          </div>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat nam, voluptatum cum hic sed iste perferendi</p>
+          <a href="#"><button>Adicionar</button></a>
+      </div>
+      </section>
+<!-- ---------------------------------------------------- -->
+      <section class="section-add2" 
+      data-aos="dade-up"
+      data-aos-delay="300"
+      data-aos-duration="800"
+      data-aos-easing="ease-in-out" id="1">
+        <div  data-aos="dade-up"
+        data-aos-delay="300"
+        data-aos-duration="800"
+        data-aos-easing="ease-in-out">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum ut soluta natus veniam expedita cupiditate officia odio quasi dolor, distinctio, id ipsam autem. Debitis amet asperiores laborum! Totam, quas omnis.</div>
+      </section>
+
+<!-- ---------------------------------------------------- -->
+
+      <section class="section-add3" id="2">
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis beatae molestiae perferendis vero maxime ex! Corporis eligendi magni minima a veniam minus molestias doloribus similique aliquam, nesciunt maxime ipsum quidem.</div>
+      </section>
+
+<!-- Aqui sera o rodapé da pagina -->
+<footer class="footer-container">
+  <div class="icons">
+    <h1>Redes Sociais</h1>
+    <ul>
+      <li><a href="">Instagram</a></li>
+    </ul>
+  </div>
+
+  <div class="icons">
+    <h1>Redes Sociais</h1>
+    <ul>
+      <li><a href="">Instagram</a></li>
+    </ul>
+  </div>
+  <div class="icons">
+    <h1>Redes Sociais</h1>
+    <ul>
+      <li><a href="">Instagram</a></li>
+    </ul>
+  </div>
+    <div class="logo-section">
+      <!-- Conteúdo da seção do logo -->
+      <p>Copyright 2023 © Irmão do jorel All Rights Reserved.</p>
+    </div>
+  </footer>
+<script>
   
+
+</script>
     <!-- scripts ta pagina -->
+    <script src="public/assets/erros/400/erro400.js"></script>
     <script src="public/assets/js/navbar/responsive.js"></script>
     <script src="public/assets/js/api/search-api.js"></script>
     <script src="public/assets/js/navbar/search-buttom.js"></script>
     <script src="public/assets/js/navbar/script.js"></script>
+    <script src="public/assets/js/loanding/load.js"></script>
     <script src="https://kit.fontawesome.com/039aabddcc.js" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -1,16 +1,16 @@
-body {
+/* body {
     background-color: var(--background-color);
-    color: var(--text-color);
+    
 }
 
   .dark-theme {
-    --background-color: #1f1f1f;
+    --background-color: #e40f0f;
     --text-color: #ffffff;
     --text-hover-color: #797979;
   }
   
   .light-theme {
-    --background-color: #f8f8f8;
-    --text-color: #000000;
-    --text-hover-color: #797979;
-  }
+    --background-color: #e00606;
+    --text-color: #fbff00;
+    --text-hover-color: #f10000;
+  } */

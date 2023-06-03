@@ -1,27 +1,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
-
-body {
-  background-color: var(--background-color);
-  color: var(--text-color);
-}
-
-.dark-theme {
-  --background-color: #1f1f1f;
+/* .dark-theme {
+  --background-color: #000000;
   --text-color: #ffffff;
   --text-hover-color: #797979;
   --border-color: #ffffff;
-  --background-navbar: #525252;
 }
 
 .light-theme {
-  --background-color: #f8f8f8;
+  --background-color: #a02222;
   --text-color: #000000;
-  --text-hover-color: #858585;
+  --text-hover-color: #666666;
   --border-color:#000000;
-  --background-navbar: #5e5e5e;
-}
+} */
 /* ------------------------------------------------------- */
+
+html, body {
+  height: 100%;
+  min-height: 100%;
+  margin: 0;
+  color: var(--text-color);
+  scroll-behavior: smooth;
+}
+
+body {
+  background: url(https://i.ibb.co/d55XzmM/Capa-Cast-16.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;            
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;        
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #272727;  
+  border-radius: 20px;      
+  border: 1px solid #5c5c5c;  
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -32,7 +54,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--background-navbar);
+  background-color: rgba(141, 233, 87, 0.945);
+  margin: 0 50px;
+  border-radius: 0 0 20px 20px;
 }
 
 
@@ -41,15 +65,15 @@ nav .navbar {
     text-align: center;
     align-items: center;
     font-family: 'Oswald', sans-serif;
-    font-size: 16px;
+    font-size: 15px;
 }
 
 .logo a {
+    margin: 0 11px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #f8f8f8;
     text-decoration: none;
-    display: block;
-    padding: 10px;
-    border-radius: 0.5rem;
-    color: var(--text-color);
+    font-weight: bold;
 }
 
 nav .navbar ul {
@@ -66,13 +90,74 @@ nav>.navbar>ul>li>a {
   color: var(--text-color);
     text-decoration: none;
     padding: 10px;
+    position: relative;
 }
 
-nav>.navbar>ul>li>a:hover {
-    color: var(--text-hover-color);
+nav>.navbar>ul>li>a::after {
+  content: " ";
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  right: 0;
+  background-color: #000000;
+  position: absolute;
+  transition: 0.3s ease-in-out ;
+  border-radius: 100px;
+}
+nav>.navbar>ul>li>a::before {
+  content: " ";
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000000;
+  position: absolute;
+  transition: 0.3s ease-in-out ;
+  border-radius: 100px;
+}
+nav>.navbar>ul>li>a:hover::after, nav>.navbar>ul>li>a:hover::before {
+  width: 100%;
+
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-btn {
+  color: #333;
+  border: none;
+  cursor: pointer;
 }
 
 
+.dropdown-content {
+  position: absolute;
+  top: 100%;
+  text-align: center;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  display: none;
+  z-index: 3;
+}
+
+.dropdown-content a {
+  color: #333;
+  padding: 10px;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-btn.active .dropdown-content {
+  display: block;
+}
 
 /* ------------------------------------------------------- */
 
@@ -96,7 +181,7 @@ nav>.navbar>ul>li>a:hover {
     transition: width 0.3s, opacity 0.3s;
     outline: none;
     border: none;
-    background-color: #313131;
+    background-color: #a18b8b8e;
     border-radius: 50px;
     color: var(--text-color);
 }
@@ -112,4 +197,192 @@ nav>.navbar>ul>li>a:hover {
 
   }
   
- 
+ /* Estilos para a tela de carregamento */
+/* 
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f2f2f2;
+}
+
+.loader {
+  border: 10px solid #f3f3f3;
+  border-top: 10px solid #3498db;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+} */
+
+/* -------------------------- */
+.container-section, .section-add2, .section-add3 {
+  position: relative;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.container-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+   text-decoration: none;
+}
+
+/* .container-section  {
+  background: url(https://i.ibb.co/d55XzmM/Capa-Cast-16.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+  z-index: 1;
+} */
+
+.container-section .conteudo-add .tooltip h1 {
+  color: rgba(29, 214, 29, 0.87);
+}
+
+
+.container-section a {
+  text-decoration: none;
+  color: #f8f8f8;
+}
+
+.container-section button {
+  padding: 10px;
+  width: 117px;
+  border: none;
+  font-size: 17px;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: transparent;
+  backdrop-filter: blur(5px);
+  transition: all 1s;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 10px;
+  border: 1px solid #797979a9;
+  box-shadow: 0 0 10px rgb(43, 38, 38);
+}
+
+.container-section button:hover {
+  box-shadow: 0 0 12px rgb(119, 105, 105);
+}
+
+.container-section button::before {
+  content: '';
+  position: absolute;
+  background-color: rgb(131,179,59);
+  transform: skew(-40deg);
+  top: 0;
+  left: -20px;
+  width: 0%;
+  height: 100%;
+  z-index: -1;
+  transition: all 1s;
+}
+.container-section button::after {
+  content: '';
+  position: absolute;
+  background-color: rgb(127,172,43);
+  transform: skew(-40deg);
+  bottom: 0;
+  right: -20px;
+  width: 0%;
+  height: 100%;
+  z-index: -1;
+  transition: all 1s;
+}
+
+
+.container-section button:hover::before,
+.container-section button:hover::after {
+  width: 70%;
+}
+/* .section-add3 {
+  background: url(https://media.discordapp.net/attachments/1065442095684399165/1101245122953355344/Change_the_game.jpg?width=832&height=468);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+} */
+
+
+/*
+footer da pagina
+*/
+
+.footer-container {
+  margin-top: auto;
+}
+
+.footer-container, footer {
+background-color: rgb(23, 23, 23);
+padding: 10px;
+display: flex;
+text-decoration: none;
+flex-direction: column;
+}
+.icons, .logo-section {
+  margin: 0 0 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.footer-container .icons {
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  font-size: 8px;
+  flex-direction: column;
+}
+
+.footer-container .icons ul {
+  display: flex;
+  flex-direction: column;
+}
+.footer-container .logo-section p {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  color: #c4b1b1;
+}
+
+
+.container-section .conteudo-add .tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.container-section .conteudo-add .tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.container-section .conteudo-add  .tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
